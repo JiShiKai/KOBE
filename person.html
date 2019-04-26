@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.css.git/trunk/animate.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .max{
+            width:100%;
+            height:1850px;
+            border:1px solid blue;
+            overflow: hidden;
+
+        }
+        .max .box{
+            width:100%;
+            height:800px;
+            background:url(images/timg.jpg) no-repeat;
+            background-size:100% 800px;
+        }
+        .max .box .top-title{
+            width:100%;
+            height:100px;
+            background:orange;
+            text-align:center;
+            line-height:100px;
+            font-size:30px;
+        }
+        .max .box .content{
+            width:80%;
+            height:600px;
+            /* background:gray; */
+            margin:50px auto;
+        }
+        .max .box .content .left-profile{
+            width:400px;
+            height:600px;
+            /* background:skyblue; */
+        }
+        .max .box .content .left-profile .datu{
+            width:300px;
+            height:400px;
+            /* border:1px solid red; */
+            margin-left:50px;
+            overflow: hidden;
+            border-radius:30px;
+            /* padding-top:-25px; */
+        }
+        .max .box .content .left-profile .tu{
+            transition: all 1s ease 0s;
+            width:300px;
+            height:400px;
+            /* border:1px solid black; */
+            overflow: hidden;
+        }
+        .max .box .content .left-profile .tu img{
+            width:300px;
+            height:400px;
+        }
+        .max .box .content .left-profile .datu .tu:hover{
+            transform: scale(1.1);
+        }
+        .max .box .content .left-profile .text{
+            width:100%;
+            height:200px;
+            /* background-color: red; */
+            /* position: relative; */
+        }
+        .max .box .content .left-profile .text p{
+            width:150px;
+            height:50px;
+            float: left;
+            /* text-align:center; */
+            line-height:50px;
+            margin-left:49px;
+            color:white;
+            transition: all 0.7s ease 0s;
+        }
+        .max .box .content .left-profile .text p:hover{
+            /* border:1px solid black; */
+            background:skyblue;
+            border-radius:10px;
+            color:black;
+        }
+        .max .subject{
+            width:100%;
+            height:800px;
+            /* background:orange; */
+            position: relative;
+        }
+        .max .subject .zi{
+            text-align:center;
+            line-height:80px;
+            font-size:25px;
+        }
+        .max .subject .kt{
+            width:80%;
+            height:600px;
+            /* margin:50px auto; */
+            /* border:1px solid black; */
+            position: absolute;
+            left:10%;
+            top:20%;
+        }
+        .max .subject .kt .box-tu{
+            width:50%;
+            height:600px;
+            border-radius:50%;
+            overflow: hidden;
+            /* border:1px solid black; */
+            /* margin-left:100px; */
+        }
+        .max .subject .kt .box-tu::before{
+            content: "";
+            transition: all 1s ease 0s;
+            display: none;
+            line-height: 0px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            opacity: 0.6;
+            position: absolute;
+            z-index: 99;
+        }
+        .max .subject .kt .box-tu:hover::before{
+            content: "世间之巅，2010夺冠图";
+            width:50%;
+            height:600px;
+            background:white;
+            border-radius:50%;
+            text-align:center;
+            line-height:600px;
+            font-size:25px;
+            /* margin-left: -150px;
+            margin-top: -110px; */
+        }
+        /* .max .subject .kt .box-tu {
+            width:100%;
+            height:600px;
+            border-radius:50%;
+            border:1px solid red;
+        } */
+        .max .subject .kt .box-tu  img{
+            width:100%;
+            height:600px;
+        }
+        .max .subject .kt .box-tu2{
+            width:50%;
+            height:600px;
+            /* border:1px solid black; */
+            margin-left:600px;
+            margin-top:-600px;
+            border-radius:50%;
+            overflow: hidden;
+        }
+        .max .subject .kt .box-tu2::before{
+            content: "";
+            transition: all 1s ease 0s;
+            display: none;
+            line-height: 0px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            opacity: 0.6;
+            position: absolute;
+            z-index: 99;
+        }
+        .max .subject .kt .box-tu2:hover::before{
+            content: "世间之巅，2010夺冠图";
+            width:50%;
+            height:600px;
+            background:white;
+            border-radius:50%;
+            text-align:center;
+            line-height:600px;
+            font-size:25px;
+            /* margin-left: -150px;
+            margin-top: -110px; */
+        }
+        .max .subject .kt .box-tu2  img{
+            width:100%;
+            height:600px;
+        }
+        .bottom{
+            width:100%;
+            height:250px;
+            background-color:rgb(85,85,85);
+        }
+        .bottom .footer{
+            width:80%;
+            height:250px;
+            /* background:skyblue; */
+            margin:0 auto;
+            position: relative;
+        }
+        .bottom .footer .splendid{
+            width:25%;
+            height:100%;
+            /* background:orange; */
+            margin-left:20px;
+            position: absolute;
+        }
+        .bottom .footer .splendid h3{
+            width:100%;
+            color:white;
+            padding-top:25px;
+            padding-left:25px;
+        }
+        .bottom .footer .splendid .content{
+            width:100%;
+            height:100%;
+            padding-left:10px;
+            padding-top:15px;
+        }
+        .bottom .footer .splendid .content p{
+            width:95px;
+            height:40px;
+            float: left;
+            text-align:center;
+            line-height:40px;
+            color:rgb(204,204,204);
+        }
+        .bottom .footer .about{
+            width:25%;
+            height:100%;
+            /* background:orange; */
+            position: absolute;
+            left:40%;
+        }
+        .bottom .footer .about h3{
+            width:100%;
+            color:white;
+            padding-top:25px;
+            /* padding-left:25px; */
+        }
+        .bottom .footer .about p{
+            padding-top:15px;
+            float: left;
+            line-height:40px;
+            color:rgb(204,204,204);
+        }
+        .bottom .footer .erweima{
+            width:25%;
+            height:100%;
+            position: absolute;
+            left:80%;
+        }
+        .bottom .footer .erweima i{
+            width:35px;
+            height:35px;
+            background:blue;
+            position: absolute;
+            left:60px;
+            top:20px;
+            background:url(images/tubiao.png)-93px -150px no-repeat;
+        }
+        .bottom .footer .erweima img{
+            position: absolute;
+            left:0px;
+            top:70px;
+            /* display: none; */
+        }
+   </style>
+</head>
+<body>
+    <div class="max">
+        <div class="box">
+            <div class="top-title">
+                <h1>Kobe Bryant profile</h1>
+            </div>
+            <div class="content">
+                <div class="left-profile">
+                    <div class="datu">
+                        <div class="tu">
+                            <img src="images/datou.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p class="animated fadeInLeft delay-2s">中文:科比·布莱恩特</p>
+                        <p class="animated fadeInLeft delay-3s">生日:1978-8-23</p>
+                        <p class="animated fadeInLeft delay-2s">身高:1.98米</p>
+                        <p class="animated fadeInLeft delay-3s">国籍:美国</p>
+                        <p class="animated fadeInLeft delay-4s">职业:篮球运动员</p>
+                        <p class="animated fadeInLeft delay-5s">球队:洛杉矶湖人</p>
+                        <p class="animated fadeInLeft delay-4s">职业:篮球运动员</p>
+                        <p class="animated fadeInLeft delay-5s">位置:得分后卫</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subject">
+            <div class="zi">
+                <h1>take the crown</h1>
+            </div>
+            <div class="kt">
+                <div class="box-tu">
+                        <img src="images/guan1.jpg" alt="">
+                        <div class="white-text"></div>
+                </div>
+                <div class="box-tu2">
+                    <div class="tu2">
+                        <img src="images/guan2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+                <div class="footer">
+                    <div class="splendid">
+                        <h3>更多精彩</h3>
+                        <div class="content">
+                            <p>网站简介</p>
+                            <p>个人简介</p>
+                            <p>广告合作</p>
+                            <p>精彩内容</p>
+                            <p>网站建设</p>
+                            <p>科比商城</p>
+                            <p>科比简介</p>
+                            <p>篮球教学</p>
+                            <p>使用条款</p>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <h3>关于本站</h3>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科比(KOBE)中文官网,提供最详实的科比视频、科比图片、科比比赛新闻资讯、科比博客、科比论坛以及球迷乐园等,给科比球迷提供与科比互动的最好平台!</p>
+                    </div>
+                    <div class="erweima">
+                        <i></i>
+                        <img src="images/weixin.png" alt="">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script type="text/javascript" src="https://lib.webfont.com/fastjs.min.js"></script>
+    <script type="text/javascript">
+    $webfont.load("h1", "740fc7b8cf05400e9fe041ef19902f65", "chenwixun-jian");
+    /*$webfont.load("#id1,.class1,h1", "740fc7b8cf05400e9fe041ef19902f65", "chenwixun-jian");*/
+    $webfont.draw();
+    </script>
+</body>
+</html>

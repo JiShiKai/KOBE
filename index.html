@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        a{
+            text-decoration:none;
+        }
+        .box{
+            width:100%;
+            height:1250px;
+            background:url(images/bj.png) no-repeat;
+            background-size:100% 100%;
+            opacity: 0.8;
+            overflow: hidden;
+            border:1px solid red;
+        }
+        .box .topnav{
+            width:100%;
+            height:200px;
+            border-bottom:1px solid white;
+            color:white;
+        }
+        .box .topnav .title{
+            text-align:center;
+            line-height:120px;
+            font-size:30px;
+        }
+        .box .topnav .column{
+            width:800px;
+            height:70px;
+            margin:0 auto;
+        }
+        .box .topnav .column ul{
+            list-style:none;
+            font-size:20px;
+        }
+        .box .topnav .column ul li{
+            width:160px;
+            height:70px;
+            float: left;
+            text-align:center;
+            line-height:70px;
+            color:white;
+            position: relative;
+            cursor: pointer;
+			transform-style:preserve-3d;
+			transition:all .5s ease;
+        }
+        .box .topnav .column ul li>div{
+            width:160px;
+            height:70px;
+            position: absolute;
+            text-align:center;
+            line-height:70px;
+        }
+        .box .topnav .column .red{
+            width:30px;
+            height:30px;
+            background:red;
+        }
+        .box .topnav .column ul li>div:nth-child(1){
+			transform: rotateX(-90deg) translateZ(20px);
+		}
+		.box .topnav .column ul li>div:nth-child(2){
+			transform:translateZ(20px);
+		}
+		.box .topnav .column ul li:hover{
+			transform: rotateX(90deg);
+		}
+        .box .carousel{
+            width:800px;
+            height:400px;
+            background:skyblue;
+            margin:80px auto;
+            perspective: 2500px;
+            position: relative;
+        }
+        .box .carousel .lunbo{
+            width:800px;
+            height:400px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation:move 15s ease 0s infinite normal;
+        }
+        @keyframes move{
+            from{
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotateX(360deg);
+            }
+        }
+        .box .carousel .lunbo li{
+            width: 800px;
+            height: 400px;
+            line-height: 400px;
+            text-align: center;
+            font-size: 28px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box .carousel .lunbo li:nth-child(1){
+            /* background: red; */
+            transform:rotateX(90deg) translateZ(200px);
+        }
+        .box .carousel .lunbo li:nth-child(2){
+            /* background: green; */
+            transform: rotateX(180deg) translateZ(200px);
+        }
+        .box .carousel .lunbo li:nth-child(3){
+            /* background: blue; */
+            transform: rotateX(270deg) translateZ(200px);
+        }
+        .box .carousel .lunbo li:nth-child(4){
+            /* background: yellow; */
+            transform:  rotateX(360deg) translateZ(200px);
+        }
+        .box .carousel .lunbo li img{
+            width:800px;
+            height:400px;
+        }
+        .box .carousel .suspend{
+            position: absolute;
+            width:200px;
+            height:380px;
+            background:gray;
+            top:-50px;
+            left:-360px;
+            opacity: 0.8;
+        }
+        .box .carousel .suspend span{
+            padding-left:43px;
+            color: blueviolet;
+            font-size:25px;
+        }
+        .box .carousel .suspend ul{
+            width:180px;
+            height:500px;
+            /* text-align: center; */
+            list-style:none;
+        }
+        .box .carousel .suspend ul li{
+            width:100%;
+            height:30px;
+            line-height:30px;
+            /* color:white; */
+            padding-left:10px;
+        }
+        .box .carousel .suspend ul li a{
+            text-decoration:none;
+            color:black;
+        }
+        .box .carousel .suspend-right{
+            position: absolute;
+            width:200px;
+            height:380px;
+            background:gray;
+            top:-50px;
+            right:-360px;
+            opacity: 0.8;
+        }
+        .box .carousel .suspend-right span{
+            padding-left:43px;
+            color: blueviolet;
+            font-size:25px;
+        }
+        .box .carousel .suspend-right ul{
+            width:180px;
+            height:500px;
+            /* text-align: center; */
+            list-style:none;
+
+        }
+        .box .carousel .suspend-right ul li{
+            width:100%;
+            height:30px;
+            line-height:30px;
+            color:white;
+        }
+        .box .carousel .suspend-right ul li a{
+            text-decoration:none;
+            color:black;
+        }
+        .bottom{
+            width:100%;
+            height:250px;
+            background-color:rgb(85,85,85);
+        }
+        .bottom .footer{
+            width:80%;
+            height:250px;
+            /* background:skyblue; */
+            margin:0 auto;
+            position: relative;
+        }
+        .bottom .footer .splendid{
+            width:25%;
+            height:100%;
+            /* background:orange; */
+            margin-left:20px;
+            position: absolute;
+        }
+        .bottom .footer .splendid h3{
+            width:100%;
+            color:white;
+            padding-top:25px;
+            padding-left:25px;
+        }
+        .bottom .footer .splendid .content{
+            width:100%;
+            height:100%;
+            padding-left:10px;
+            padding-top:15px;
+        }
+        .bottom .footer .splendid .content p{
+            width:95px;
+            height:40px;
+            float: left;
+            text-align:center;
+            line-height:40px;
+            color:rgb(204,204,204);
+        }
+        .bottom .footer .about{
+            width:25%;
+            height:100%;
+            /* background:orange; */
+            position: absolute;
+            left:40%;
+        }
+        .bottom .footer .about h3{
+            width:100%;
+            color:white;
+            padding-top:25px;
+            /* padding-left:25px; */
+        }
+        .bottom .footer .about p{
+            padding-top:15px;
+            float: left;
+            line-height:40px;
+            color:rgb(204,204,204);
+        }
+        .bottom .footer .erweima{
+            width:25%;
+            height:100%;
+            position: absolute;
+            left:80%;
+        }
+        .bottom .footer .erweima i{
+            width:35px;
+            height:35px;
+            background:blue;
+            position: absolute;
+            left:60px;
+            top:20px;
+            background:url(images/tubiao.png)-93px -150px no-repeat;
+        }
+        .bottom .footer .erweima img{
+            position: absolute;
+            left:0px;
+            top:70px;
+            /* display: none; */
+        }
+    </style>
+    <script type="text/javascript" src='js/jquery-1.11.3.min.js'></script>
+</head>
+<body>
+    <div class="box">
+        <div class="topnav">
+            <div class="title">
+                <h1>Profession·kobe</h1>
+            </div>
+            <div class="column">
+                <ul>
+                    <a href="#"><li>KOBE</li></a>
+                    <a href="await.html">
+                        <li>
+                            <div>个人资料</div>
+                            <div>Personal data</div>
+                        </li></a>
+                    <a href="#">
+                        <li>
+                            <div>生涯历程</div>
+                            <div>Career path</div>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <div>辉煌时刻</div>
+                            <div>Glory</div>
+                        </li>
+                    </a>
+                    <a href="shopping.html">
+                        <li>
+                            <div>科比商城</div>
+                            <div>Recent news</div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="carousel">
+            <ul class="lunbo">
+                <li><img src="images/lunbo1.jpg" alt=""></li>
+                <li><img src="images/lunbo2.jpg" alt=""></li>
+                <li><img src="images/lunbo3.jpg" alt=""></li>
+                <li><img src="images/lunbo4.jpg" alt=""></li>
+            </ul>
+            <div class="suspend">
+                <span>最新资讯</span>
+                <ul>
+                    <li><a href="#">科比开始举重训练</a></li>
+                    <li><a href="#">科比:三连败我要负责认</a></li>
+                    <li><a href="#">科比:不关注26000里程碑</a></li>
+                    <li><a href="#">科比:不想训练白白浪费</a></li>
+                    <li><a href="#">凌晨四点的打铁声</a></li>
+                    <li><a href="#">不可以在输了!!!</a></li>
+                    <li><a href="#">永不言败的科比终会归来</a></li>
+                    <li><a href="#">逝去青春科比一扣找回</a></li>
+                    <li><a href="#">最佳科密出炉</a></li>
+                    <li><a href="#">休城万人齐喊科比</a></li>
+                    <li><a href="#">谁是湖人最大功臣</a></li>
+                </ul>
+            </div>
+            <div class="suspend-right">
+                <span>最新资讯</span>
+                <ul>
+                    <li><a href="#">科比开始举重训练</a></li>
+                    <li><a href="#">科比:三连败我要负责认</a></li>
+                    <li><a href="#">科比:不关注26000里程碑</a></li>
+                    <li><a href="#">科比:不想训练白白浪费</a></li>
+                    <li><a href="#">凌晨四点的打铁声</a></li>
+                    <li><a href="#">不可以在输了!!!</a></li>
+                    <li><a href="#">永不言败的科比终会归来</a></li>
+                    <li><a href="#">逝去青春科比一扣找回</a></li>
+                    <li><a href="#">最佳科密出炉</a></li>
+                    <li><a href="#">休城万人齐喊科比</a></li>
+                    <li><a href="#">谁是湖人最大功臣</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="footer">
+            <div class="splendid">
+                <h3>更多精彩</h3>
+                <div class="content">
+                    <p>网站简介</p>
+                    <p>个人简介</p>
+                    <p>广告合作</p>
+                    <p>精彩内容</p>
+                    <p>网站建设</p>
+                    <p>科比商城</p>
+                    <p>科比简介</p>
+                    <p>篮球教学</p>
+                    <p>使用条款</p>
+                </div>
+            </div>
+            <div class="about">
+                <h3>关于本站</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科比(KOBE)中文官网,提供最详实的科比视频、科比图片、科比比赛新闻资讯、科比博客、科比论坛以及球迷乐园等,给科比球迷提供与科比互动的最好平台!</p>
+            </div>
+            <div class="erweima">
+                <i></i>
+                <img src="images/weixin.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.box .carousel .suspend').stop(true).animate({'top':'-10%'},500);
+            $(window).scroll(function(){
+                $('.box .carousel .suspend').stop(true).animate({'top':'-20%',marginTop:$(window).scrollTop()},500);
+            })
+            $('.box .carousel .suspend-right').stop(true).animate({'top':'-10%'},500);
+            $(window).scroll(function(){
+                $('.box .carousel .suspend-right').stop(true).animate({'top':'-20%',marginTop:$(window).scrollTop()},500);
+            })
+        })
+    </script>
+</body>
+</html>

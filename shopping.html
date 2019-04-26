@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>科比商城网站</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        ul{
+            list-style:none;
+        }
+        a{
+            text-decoration:none;
+            color:black;
+        }
+
+        .topnav{
+            width:100%;
+            height:65px;
+            /* background:gray; */
+            border-bottom:1px solid black;
+        }
+        .topnav ul{
+            width:60%;
+            height:100%;
+            margin:0 auto;
+        }
+        .topnav ul li{
+            width:25%;
+            float:left;
+            text-align:center;
+            line-height:65px;
+        }
+        .topnav ul li:hover{
+            border-bottom:3px solid black; 
+        }
+        .gridwall{
+            width:100%;
+            height:1200px;
+            /* background-color:gray;    */
+            position: relative;
+        }
+        .gridwall .left-nav{
+            width:20%;
+            height:500px;
+            /* background:orange; */
+        }
+        .gridwall .left-nav .header{
+            width:240px;
+            height:100px;
+            font-size:30px;
+            font-family:'SimHei';
+            line-height:120px;
+            border-bottom:1px solid gray;
+            margin-left:30px;
+        }
+        .gridwall .left-nav .sex{
+            width:240px;
+            height:100px;
+            margin-top:10px;
+            margin-left:30px;
+            border-bottom:1px solid gray;
+        }
+        .gridwall .left-nav .sex p:nth-child(2){
+            padding-top:10px;
+            padding-left:30px;
+        }
+        .gridwall .left-nav .sex p:nth-child(3){
+            padding-top:10px;
+            padding-left:30px;
+        }
+        .gridwall .left-nav .foot{
+            width:240px;
+            height:100px;
+            left:30px;
+            border-bottom:1px solid gray;
+            margin-top:10px;
+            margin-left:30px;
+        }
+        .gridwall .left-nav .foot p:nth-child(2){
+            padding-top:10px;
+            padding-left:30px;
+        }
+        .gridwall .left-nav .foot p:nth-child(3){
+            padding-top:10px;
+            padding-left:30px;
+        }
+        .gridwall .right{
+            width:100%;
+            height:1200px;
+            position:absolute;
+            top:0;
+            left:20%;
+        }
+        .gridwall .right .header-topnav{
+            width:100%;
+            height:100px;
+            font-size:30px;
+            font-family:'SimHei';
+            line-height:120px;
+            margin-left:50px;
+        }
+        .gridwall .right .tu{
+            width:80%;
+            height:1000px;
+            /* background-color:skyblue; */
+            position: relative;
+        }
+        .gridwall .right .tu .box1{
+            width:275px;
+            height:375px;
+            /* border: 1px solid black; */
+            position:absolute;
+            left:40px;
+            top:50px;
+        }
+        .gridwall .right .tu .box2{
+            width:275px;
+            height:375px;
+            position:absolute;
+            /* border:1px solid black; */
+            left:330px;
+            top:50px;
+        }
+        .gridwall .right .tu .box3{
+            width:275px;
+            height:375px;
+            position:absolute;
+            left:620px;
+            top:50px;
+        }
+        .gridwall .right .tu .box4{
+            width:275px;
+            height:375px;
+            position:absolute;
+            left:910px;
+            top:50px;
+        }
+        .gridwall .right .tu .box1 .kuang1{
+            width:275px;
+            height:275px;
+            overflow: hidden;
+        }
+        .gridwall .right .tu .box1 .kuang1 .content{
+            width:275px;
+            height:100px;
+            position: absolute;
+            padding-left:15px;
+        }
+        .gridwall .right .tu .box2 .kuang2 .content1{
+            width:275px;
+            height:100px;
+            position: absolute;
+            padding-left:15px;
+        }
+        .gridwall .right .tu .box3 .kuang3 .content2{
+            width:275px;
+            height:100px;
+            position: absolute;
+            padding-left:15px;
+        }
+        .gridwall .right .tu .box4 .kuang4 .content3{
+            width:275px;
+            height:100px;
+            position: absolute;
+            padding-left:15px;
+        }
+        .gridwall .right .tu .box1 .kuang1 .tu1{
+            width:275px;
+            height:275px;
+            transition: all 1s ease 0s;
+        }
+        .gridwall .right .tu .box1 .kuang1 .tu1:hover{
+            transform:scale(1.2);
+        }
+        .gridwall .right .tu .kuang2{
+            width:275px;
+            height:275px;
+            overflow: hidden;
+        }
+        .gridwall .right .tu .kuang2 .tu2{
+            width:275px;
+            height:275px;
+            transition: all 1s ease 0s;
+        }
+        .gridwall .right .tu .kuang2 .tu2:hover{
+            transform:scale(1.2);
+        }
+        .gridwall .right .tu .kuang3{
+            width:275px;
+            height:275px;
+
+            overflow: hidden;
+        }
+        .gridwall .right .tu .kuang3 .tu3{
+            width:275px;
+            height:275px;
+            transition: all 1s ease 0s;
+        }
+        .gridwall .right .tu .kuang3 .tu3:hover{
+            transform:scale(1.2);
+        }
+        .gridwall .right .tu .kuang4{
+            width:275px;
+            height:275px;
+            overflow: hidden;
+        }
+        .gridwall .right .tu .kuang4 .tu4{
+            width:275px;
+            height:275px;
+            transition: all 1s ease 0s;
+        }
+        .gridwall .right .tu .kuang4 .tu4:hover{
+            transform:scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <ul>
+            <li><a href="#">球衣男</a></li>
+            <li><a href="#">球衣女</a></li>
+            <li><a href="#">球鞋男</a></li>
+            <li><a href="#">球鞋女</a></li>
+        </ul>
+    </div>
+    <div class="gridwall">
+        <div class="left-nav">
+            <div class="header">科比·布莱恩特</div>
+            <div class="sex">
+                <p>性别</p>
+                <p>男</p>
+                <p>女</p>
+            </div>
+            <div class="foot">
+                <p>鞋类</p>
+                <p>上衣</p>
+                <p>T恤</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header-topnav">
+                耐克科比系列
+            </div>
+            <div class="tu">
+                <div class="box1">
+                    <div class="kuang1">
+                        <div class="tu1">
+                            <img src="images/ke1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <span>kobe 1 Protro</span><br>
+                            <span>男子篮球鞋</span><br>
+                            <span>￥1,399</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="kuang2">
+                        <div class="tu2">
+                            <img src="images/ke1.png" alt="">
+                        </div>
+                        <div class="content1">
+                            <span>kobe 1 Protro</span><br>
+                            <span>男子篮球鞋</span><br>
+                            <span>￥1,399</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="kuang3">
+                        <div class="tu3">
+                            <img src="images/ke1.png" alt="">
+                        </div>
+                        <div class="content2">
+                                <span>kobe 1 Protro</span><br>
+                                <span>男子篮球鞋</span><br>
+                                <span>￥1,399</span>
+                            </div>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="kuang4">
+                        <div class="tu4">
+                            <img src="images/ke1.png" alt="">
+                        </div>
+                        <div class="content3">
+                            <span>kobe 1 Protro</span><br>
+                            <span>男子篮球鞋</span><br>
+                            <span>￥1,399</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
